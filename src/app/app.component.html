@@ -1,0 +1,26 @@
+<div class="col-sm-12">
+  <ul class="nav justify-content-start" routerLinkActive="active">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="book">Book</a>
+    </li>
+    <ng-template [ngIf]="auth.isAuthenticated()">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="login">Login</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="register">Register</a>
+      </li>
+    </ng-template>
+
+    <li class="nav-item" *ngIf="auth.isAuthenticated()">
+      <a class="nav-link"style = "cursor:pointer;" (click)="onLogout()"> Logout </a>
+    </li>
+   
+  </ul>
+</div>
+<div class="row">
+  <div class="col-s,-12">
+    <router-outlet></router-outlet>
+  </div>
+</div>

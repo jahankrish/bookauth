@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+h3 {
+  color: #fff;
+  font-weight: bold;
+}
+.title {
+  text-align: center;
+  vertical-align: bottom;
+  background-color: blue;
+  height: 40px;
+  padding-top: 5px;
+}
+/* label{
+    font-size: 16px;
+} */
+input {
+  width: 100%;
+}
+.from-control.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+table,
+th,
+td {
+  border: 1px solid gray;
+}
+.btn{
+    width: 125px;
+    height: 35px;
+    font-size: 18px;
+    font-variant: small-caps;
+    
+}

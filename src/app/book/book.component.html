@@ -1,0 +1,80 @@
+<div class="container">
+  <form [formGroup]="bookForm">
+    <div class="row">
+      <div class="row col-sm-6">
+        <h3 class="title">My First http book</h3>
+        <br /><br />
+        <div class="form-group">
+          <label for="bookid">BookId :</label><br />
+          <input
+            type="text"
+            id="bookId"
+            name="bookId"
+            formControlName="bookId"
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <label for="bookname">BookName :</label><br />
+          <input
+            type="text"
+            id="bookName"
+            name="bookName"
+            formControlName="bookName"
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <label for="author">Author :</label><br />
+          <input
+            type="text"
+            id="author"
+            name="author"
+            formControlName="author"
+            autocomplete="off"
+          />
+        </div>
+        <div class="from-group">
+          <button
+            class="btn btn-info"
+            (click)="onPushBook()"
+            [disabled]="!bookForm.valid"
+          >
+            pushBook
+          </button>
+          <button
+            class="btn btn-success"
+            (click)="onSave()"
+            [disabled]="!bookForm.valid"
+          >
+            onSave
+          </button>
+          <button
+            class="btn btn-warning"
+            (click)="onGet()"
+            [disabled]="!bookForm.valid"
+          >
+            onSave
+          </button>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <div class="row">
+      <div class="row col-sm-6">
+        <table class="table">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Author</th>
+          </tr>
+          <tr *ngFor="let obj of myBooks">
+            <td>{{ obj.bookId }}</td>
+            <td>{{ obj.bookName }}</td>
+            <td>{{ obj.author }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </form>
+</div>
