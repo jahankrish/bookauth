@@ -7,18 +7,19 @@ import { AuthService } from '../auth/auth.service';
   providedIn: 'root',
 })
 export class BookService {
-  constructor(private httpClient: HttpClient, private auth:AuthService) {}
+  constructor(private httpClient: HttpClient, private auth: AuthService) {}
 
   saveBook(books: any[]): Observable<any> {
-    const tk = this.auth.getToken();
+    const tk = this.auth.getAuthToken();
     return this.httpClient.post(
       'https://madhttp-default-rtdb.firebaseio.com/data.json?auth=' + tk,
       books
     );
   }
 
-  getBook(): Observable<any> {
-    const tk = this.auth.getToken();
+  getBooks(): Observable<any> {
+    
+    const tk = this.auth.getAuthToken();
     return this.httpClient.get(
       'https://madhttp-default-rtdb.firebaseio.com/data.json?auth=' + tk
     );

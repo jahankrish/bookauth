@@ -12,9 +12,6 @@ h3 {
   height: 40px;
   padding-top: 5px;
 }
-/* label{
-    font-size: 16px;
-} */
 input {
   width: 100%;
 }
@@ -24,12 +21,14 @@ input {
 table,
 th,
 td {
-  border: 1px solid gray;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  margin-top: 10px;
 }
-.btn{
-    width: 125px;
-    height: 35px;
-    font-size: 18px;
-    font-variant: small-caps;
-    
+.btn {
+  width: 125px;
+  height: 35px;
+  font-size: 18px;
+  font-variant: small-caps;
 }

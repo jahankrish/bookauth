@@ -1,7 +1,7 @@
 <div class="container">
   <form [formGroup]="loginForm">
     <div class="row">
-      <div class="row col-sm-6">
+      <div class="row col-sm-5">
         <h3 class="title">LoginForm</h3>
         <br /><br />
         <div class="form-group">
@@ -34,7 +34,8 @@
         </span>
         </div>
         <div class="from-group">
-          <button class="btn btn-success" (click)="onLogin()" [disabled]="!loginForm.valid">Login</button>
+          <button class="btn btn-success" (click)="onLogin()" [disabled]="!loginForm.valid">Login</button><br><br>
+          <button class="btn btn-success" (click)="Register()">Register</button>
         </div>
       </div>
     </div>

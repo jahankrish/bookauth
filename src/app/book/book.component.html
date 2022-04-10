@@ -36,45 +36,15 @@
         </div>
         <div class="from-group">
           <button
-            class="btn btn-info"
-            (click)="onPushBook()"
-            [disabled]="!bookForm.valid"
-          >
-            pushBook
-          </button>
-          <button
             class="btn btn-success"
             (click)="onSave()"
             [disabled]="!bookForm.valid"
           >
-            onSave
-          </button>
-          <button
-            class="btn btn-warning"
-            (click)="onGet()"
-            [disabled]="!bookForm.valid"
-          >
-            onSave
+            Save
           </button>
         </div>
       </div>
     </div>
     <br /><br />
-    <div class="row">
-      <div class="row col-sm-6">
-        <table class="table">
-          <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Author</th>
-          </tr>
-          <tr *ngFor="let obj of myBooks">
-            <td>{{ obj.bookId }}</td>
-            <td>{{ obj.bookName }}</td>
-            <td>{{ obj.author }}</td>
-          </tr>
-        </table>
-      </div>
-    </div>
   </form>
 </div>

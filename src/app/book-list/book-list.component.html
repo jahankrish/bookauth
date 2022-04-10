@@ -1,0 +1,26 @@
+<div class="container">
+  <div style="margin: 10px 0px">
+    <h2 style="display: inline-block">BooksList</h2>
+
+    <button class="btn btn-success success" (click)="onAddBooks()">Add</button>
+
+    <button class="btn btn-warning warning" (click)="logOut()">Logout</button>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>BookName</th>
+        <th>Author</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let obj of myBooks">
+        <td>{{ obj.bookId }}</td>
+        <td>{{ obj.bookName }}</td>
+        <td>{{ obj.author }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

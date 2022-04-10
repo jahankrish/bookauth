@@ -10,6 +10,7 @@ import { BookService } from './services/book.service';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { AuthService } from './auth/auth.service';
+import { BookListComponent } from './book-list/book-list.component';
 
 
 
@@ -18,7 +19,8 @@ import { AuthService } from './auth/auth.service';
     AppComponent,
     BookComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    BookListComponent
   ],
   imports: [
 
